@@ -47,7 +47,7 @@ let et = 0
 let x = 0
 
 for (let i=0; i < longText.length; i++){
-    if(longText[i] = ' ') {
+    if(longText[i] == ' ') {
         words++
         if (longText.slice(i, i+4) == ' et '){
             x++
@@ -57,5 +57,31 @@ for (let i=0; i < longText.length; i++){
     if(longText[i] === ' ' && longText[i+1] === 'e' && longText[i+2] === 't' && longText[i+3] === ' '){
         et++
     }
+}
 
+console.log(words)
+
+// Bonus 2
+let alphabet = ["a",..."z","A",..."Z"]
+
+let phraseToCheck = "A man, a plan, a canal, Panama!"
+
+let phrase = ''
+
+for (let i=0; i < phraseToCheck.length; i++) {
+    if(alphabet.includes(phraseToCheck[i])){
+        phrase + phraseToCheck[i]
+    }
+}
+
+let backwards = ''
+
+for (let i = phrase.length - 1 ; i >= 0; i-- ) {
+    backwards += phrase[i]
+}
+
+if (backwards == phrase) {
+    console.log("It's a palindrome")
+} else {
+    console.log("It's not a palindrome")
 }
