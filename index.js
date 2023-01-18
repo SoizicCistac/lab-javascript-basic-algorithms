@@ -85,3 +85,17 @@ if (backwards == phrase) {
 } else {
     console.log("It's not a palindrome")
 }
+
+
+// Bonus Time 2
+
+let word = 'A man, a plan, a canal, Panama!'.toLowerCase()
+const re = /[!,.*+?^${}()|[\]\\ ]/g;
+word = word.replace(re, '')
+let backwards = String(Array(word).reverse())
+if (word == backwards){
+    console.log('Its a palindrome')
+}
+else{
+    console.log('Its not a palindrome')
+}
