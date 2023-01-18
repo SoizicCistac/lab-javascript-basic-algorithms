@@ -62,17 +62,21 @@ for (let i=0; i < longText.length; i++){
 console.log(words)
 
 // Bonus 2
-let alphabet = ["a",..."z","A",..."Z"]
+let alphabet = ["a","b","c","d","e","f","g","h","i","j","k","l","m","n","o","p","q","r","s","t","u","v","w","x","y","z"]
 
-let phraseToCheck = "A man, a plan, a canal, Panama!"
+let phraseToCheck = "A man, a plan, a canal, Panama!".toLowerCase()
 
 let phrase = ''
 
 for (let i=0; i < phraseToCheck.length; i++) {
     if(alphabet.includes(phraseToCheck[i])){
-        phrase + phraseToCheck[i]
+        phrase += phraseToCheck[i]
+    } else {
+        phrase
     }
 }
+
+console.log(phrase)
 
 let backwards = ''
 
